@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    # jdbc:mysql://localhost:3306/test 数据库地址
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root # 数据库用户名
+    driver-class-name: com.mysql.jdbc.Driver  # 数据库驱动
+    password: root  # 数据库密码
+
+  jpa:
+      hibernate:
+          ddl-auto:  none #update  #  create-drop  如果实体对应的表已存在，先删除再创建，否则直接创建
+        #  ！！！注意： 第一次运行时可设置为 create-drop, 这样就不需要手动创建数据库表, 但是后面运行务必设置为none
+      show-sql: true
+      format_sql: true
+
+server:
+    port: 8082
+
+
